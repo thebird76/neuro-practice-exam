@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#c9cdd6"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#3a3f4a" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="520" height="380" rx="12" fill="#ffffff"/>
+
+  <!-- White matter outline -->
+  <ellipse cx="260" cy="180" rx="210" ry="145" fill="#f4f1ea" stroke="#3a3f4a" stroke-width="2.5"/>
+
+  <!-- Dorsal columns (shaded) -->
+  <path d="M260 162 C282 160 297 148 310 110 L323 60 L325 42 A210 145 0 0 0 195 42 L197 60 L210 110 C223 148 238 160 260 162 Z" fill="url(#hatch)" stroke="#3a3f4a" stroke-width="1"/>
+
+  <!-- Lateral corticospinal tracts (shaded) -->
+  <ellipse cx="398" cy="168" rx="40" ry="44" fill="url(#hatch)" stroke="#3a3f4a" stroke-width="1"/>
+  <ellipse cx="122" cy="168" rx="40" ry="44" fill="url(#hatch)" stroke="#3a3f4a" stroke-width="1"/>
+
+  <!-- Gray matter (butterfly) -->
+  <path d="M260 168
+           C285 165 300 150 315 110 L330 62 L345 64
+           C340 110 330 150 345 175
+           C360 185 370 200 375 230
+           C378 265 345 280 315 270
+           C290 262 280 230 262 205
+           L258 205
+           C240 230 230 262 205 270
+           C175 280 142 265 145 230
+           C150 200 160 185 175 175
+           C190 150 180 110 175 64
+           L190 62 L205 110
+           C220 150 235 165 260 168 Z"
+        fill="#b8bcc6" stroke="#3a3f4a" stroke-width="1.5"/>
+
+  <!-- Central canal, median septum and fissure -->
+  <circle cx="260" cy="187" r="4" fill="#ffffff" stroke="#3a3f4a" stroke-width="1"/>
+  <line x1="260" y1="35" x2="260" y2="162" stroke="#3a3f4a" stroke-width="1.5"/>
+  <path d="M254 325 L260 292 L266 325" fill="#ffffff" stroke="#3a3f4a" stroke-width="1.5"/>
+
+  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2330">Dorsal</text>
+  <text x="260" y="352" text-anchor="middle" font-size="14" font-weight="700" fill="#1d2330">Ventral</text>
+  <g transform="translate(372 352)">
+    <rect x="0" y="-12" width="16" height="14" fill="url(#hatch)" stroke="#3a3f4a" stroke-width="1"/>
+    <text x="22" y="0" font-size="12" fill="#5b6577">= demyelination</text>
+  </g>
+</svg>

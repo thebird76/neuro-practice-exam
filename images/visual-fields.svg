@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" width="520" height="280" font-family="Helvetica, Arial, sans-serif">
+  <rect width="520" height="280" rx="12" fill="#ffffff"/>
+  <!-- Left eye field -->
+  <g transform="translate(135 145)">
+    <circle r="95" fill="#ffffff" stroke="#3a3f4a" stroke-width="2"/>
+    <path d="M0 0 L0 -95 A95 95 0 0 1 95 0 Z" fill="#3a3f4a"/>
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#9aa1ad" stroke-width="1.2"/>
+    <line x1="0" y1="-95" x2="0" y2="95" stroke="#9aa1ad" stroke-width="1.2"/>
+    <circle r="95" fill="none" stroke="#3a3f4a" stroke-width="2"/>
+    <circle r="3" fill="#d6336c"/>
+    <text x="0" y="-108" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">Left eye</text>
+  </g>
+  <!-- Right eye field -->
+  <g transform="translate(385 145)">
+    <circle r="95" fill="#ffffff" stroke="#3a3f4a" stroke-width="2"/>
+    <path d="M0 0 L0 -95 A95 95 0 0 1 95 0 Z" fill="#3a3f4a"/>
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#9aa1ad" stroke-width="1.2"/>
+    <line x1="0" y1="-95" x2="0" y2="95" stroke="#9aa1ad" stroke-width="1.2"/>
+    <circle r="95" fill="none" stroke="#3a3f4a" stroke-width="2"/>
+    <circle r="3" fill="#d6336c"/>
+    <text x="0" y="-108" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">Right eye</text>
+  </g>
+  <text x="260" y="268" text-anchor="middle" font-size="12" fill="#5b6577">Shaded = vision loss · red dot = fixation point</text>
+</svg>

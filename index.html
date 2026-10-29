@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuro Practice Exam</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main id="app">
+
+    <!-- Start screen -->
+    <section id="screen-start" class="screen start" hidden>
+      <div class="start-card">
+        <p class="eyebrow">Practice exam</p>
+        <h1 id="exam-title"></h1>
+        <p id="exam-subtitle" class="lede"></p>
+
+        <ul class="facts">
+          <li><strong id="fact-count"></strong><span>questions</span></li>
+          <li><strong id="fact-time"></strong><span>minutes</span></li>
+          <li><strong>Review</strong><span>after you submit</span></li>
+        </ul>
+
+        <div class="tips">
+          <h2>How it works</h2>
+          <ul>
+            <li>The timer starts when you press Start and keeps running if you close the tab. When it reaches 0:00, the exam submits automatically.</li>
+            <li>Use <strong>Flag</strong> to mark questions you want to revisit. The question grid shows what's answered and flagged.</li>
+            <li>To cross out a choice, right-click it or press its <span class="inline-x">✕</span> button.</li>
+            <li>Keyboard: <kbd>A</kbd>–<kbd>E</kbd> answer, <kbd>←</kbd> <kbd>→</kbd> move, <kbd>F</kbd> flag.</li>
+          </ul>
+        </div>
+
+        <label class="name-field" id="name-field">
+          <span>Your first name <em>(optional)</em></span>
+          <input id="name-input" type="text" autocomplete="given-name" maxlength="40">
+        </label>
+
+        <p id="resume-note" class="resume-note" hidden></p>
+        <button id="start-btn" class="btn primary large" type="button">Start exam</button>
+      </div>
+    </section>
+
+    <!-- Exam screen -->
+    <section id="screen-exam" class="screen exam" hidden>
+      <header class="exam-bar">
+        <div class="bar-left">
+          <button id="nav-toggle" class="btn ghost nav-toggle" type="button" aria-expanded="false" aria-controls="navigator">
+            <span aria-hidden="true">▦</span> Questions
+          </button>
+        </div>
+        <div id="timer" class="timer" role="timer" aria-label="Time remaining">45:00</div>
+        <div class="bar-right">
+          <button id="flag-btn" class="btn ghost flag-btn" type="button" aria-pressed="false">
+            <span aria-hidden="true">⚑</span> <span class="flag-label">Flag</span>
+          </button>
+          <button id="submit-btn" class="btn primary" type="button">Submit</button>
+        </div>
+      </header>
+
+      <div class="exam-body">
+        <article id="question" class="question-card" aria-live="polite"></article>
+        <aside id="navigator" class="navigator" aria-label="Question navigator">
+          <h2>Questions</h2>
+          <div id="nav-grid" class="nav-grid"></div>
+          <ul class="legend">
+            <li><span class="swatch answered"></span>Answered</li>
+            <li><span class="swatch"></span>Unanswered</li>
+            <li><span class="swatch flagged"></span>Flagged</li>
+          </ul>
+        </aside>
+      </div>
+
+      <footer class="exam-footer">
+        <button id="prev-btn" class="btn" type="button">← Previous</button>
+        <button id="next-btn" class="btn" type="button">Next →</button>
+      </footer>
+    </section>
+
+    <!-- Results screen -->
+    <section id="screen-results" class="screen results" hidden></section>
+  </main>
+
+  <dialog id="submit-dialog" class="dialog">
+    <h2>Submit your exam?</h2>
+    <p id="submit-summary"></p>
+    <div class="dialog-actions">
+      <button id="cancel-submit" class="btn" type="button">Keep working</button>
+      <button id="confirm-submit" class="btn primary" type="button">Submit exam</button>
+    </div>
+  </dialog>
+
+  <dialog id="restart-dialog" class="dialog">
+    <h2>Start over?</h2>
+    <p>This clears your answers and results on this device so the exam can be taken again.</p>
+    <div class="dialog-actions">
+      <button id="cancel-restart" class="btn" type="button">Cancel</button>
+      <button id="confirm-restart" class="btn danger" type="button">Start over</button>
+    </div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
