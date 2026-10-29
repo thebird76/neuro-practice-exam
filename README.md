@@ -8,7 +8,7 @@ A lightweight, timed practice exam for a second-year medical school neuro summat
 |---|---|
 | `index.html` | The page: start screen, exam screen, results screen |
 | `css/styles.css` | All styling, including dark mode and phone layout |
-| `js/config.js` | Settings: time limit, goal score, results URL, closing note |
+| `js/config.js` | Settings: time limit, goal score, results URL, closing note (and the name that unlocks it) |
 | `js/questions.js` | The 30 questions, answers and explanations |
 | `js/app.js` | Timer, navigation, grading, results and review |
 | `images/` | Diagrams used in questions |

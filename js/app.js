@@ -490,7 +490,9 @@
       el("div", { class: "review-list", id: "review-list" })
     );
 
-    const closing = CONFIG.closingNote
+    const showClosing = CONFIG.closingNote &&
+      (!CONFIG.closingNoteName || (state.name || "").toLowerCase() ===CONFIG.closingNoteName.toLowerCase());
+    const closing = showClosing
       ? el("p", { class: "closing-note" }, el("span", { "aria-hidden": "true" }, "💛"), CONFIG.closingNote)
       : null;
 

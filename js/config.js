@@ -9,6 +9,8 @@ window.EXAM_CONFIG = {
   // Score shown as the target line on the results page.
   goalPercent: 70,
 
-  // Shown at the bottom of the results page.
-  closingNote: "P.S. The creator of this exam thinks you're pretty."
+  // Shown at the bottom of the results page, but only when the name entered
+  // on the start screen matches closingNoteName (not case sensitive).
+  closingNote: "P.S. The creator of this exam thinks you're pretty.",
+  closingNoteName: "Hannah"
 };
