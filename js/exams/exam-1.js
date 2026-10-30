@@ -1,4 +1,4 @@
-// Question bank for the practice exam.
+// Question bank for Practice Exam 1.
 //
 // Each question has:
 //   id          unique string (used to save answers)
@@ -14,7 +14,7 @@
 
 window.EXAM = {
   id: "neuro-summative-practice-1",
-  title: "Neuro Summative Practice Exam",
+  title: "Neuro Practice Exam 1",
   subtitle: "30 questions built from your weekly quizzes and review slides, plus a few Step 1 favorites.",
   topics: [
     "Brainstem & cranial nerves",

@@ -88,7 +88,59 @@ kbd {
 .btn.primary:hover { filter: brightness(1.08); }
 .btn.danger { background: var(--wrong); border-color: var(--wrong); color: #fff; }
 .btn.ghost { background: transparent; }
+a.btn { text-decoration: none; color: var(--text); }
+a.btn.primary { color: var(--accent-text); }
 .btn.large { padding: .8em 1.6em; font-size: 1.05rem; }
+
+/* ---------- Homepage ---------- */
+.home {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 56px 16px 40px;
+}
+.home-head { margin-bottom: 28px; }
+.home-head h1 { font-size: 2.1rem; }
+.home-head .lede { max-width: 60ch; margin-bottom: 0; }
+.exam-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.exam-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 26px 24px 22px;
+}
+.exam-card h2 { font-size: 1.35rem; }
+.exam-card .lede { margin: 8px 0 14px; }
+.exam-meta { margin: 0 0 20px; font-weight: 600; font-size: .9rem; }
+.exam-card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.status { font-size: .85rem; font-weight: 600; color: var(--muted); }
+.status.progress { color: var(--warn); }
+.status.done { color: var(--correct); }
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.back-link:hover { color: var(--accent); }
 
 /* ---------- Start screen ---------- */
 .start {
@@ -528,7 +580,7 @@ kbd {
   font-weight: 600;
 }
 .closing-note span { display: block; font-size: 1.8rem; margin-bottom: 4px; }
-.restart { text-align: center; margin-top: 24px; }
+.restart { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 24px; }
 .restart .link-btn { color: var(--muted); font-weight: 500; font-size: .85rem; }
 
 /* ---------- Narrow screens ---------- */

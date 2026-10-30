@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <path id="mass" d="M260 108 C275 96 300 84 325 92 C348 100 352 130 340 150 C328 168 300 166 282 152 C272 145 266 140 260 140 C254 140 248 145 238 152 C220 166 192 168 180 150 C168 130 172 100 195 92 C220 84 245 96 260 108 Z"/>
+  </defs>
+  <rect width="520" height="380" rx="12" fill="#ffffff"/>
+
+  <!-- Brain outline, coronal -->
+  <ellipse cx="260" cy="190" rx="200" ry="150" fill="#a9adb6" stroke="#3a3f4a" stroke-width="2.5"/>
+  <!-- Deep gray matter, slightly darker -->
+  <ellipse cx="200" cy="225" rx="34" ry="40" fill="#9a9ea8"/>
+  <ellipse cx="320" cy="225" rx="34" ry="40" fill="#9a9ea8"/>
+
+  <!-- Interhemispheric fissure -->
+  <path d="M260 40 L260 100" stroke="#3a3f4a" stroke-width="3"/>
+
+  <!-- Surrounding edema -->
+  <use href="#mass" transform="translate(260 126) scale(1.38) translate(-260 -126)" fill="#c4c7ce"/>
+
+  <!-- Lateral ventricles (dark CSF) and third ventricle, pushed down by the mass -->
+  <path d="M252 178 C240 176 226 180 220 192 C218 198 224 201 232 198 C242 194 250 192 254 196 Z" fill="#3a3f4a"/>
+  <path d="M268 178 C280 176 294 180 300 192 C302 198 296 201 288 198 C278 194 270 192 266 196 Z" fill="#3a3f4a"/>
+  <rect x="257" y="212" width="6" height="46" rx="3" fill="#3a3f4a"/>
+
+  <!-- Enhancing rim with necrotic center, crossing the midline -->
+  <use href="#mass" fill="none" stroke="#3a3f4a" stroke-width="13"/>
+  <use href="#mass" fill="#6f747e" stroke="#ffffff" stroke-width="9"/>
+
+  <text x="40" y="36" font-size="16" font-weight="700" fill="#1d2330">R</text>
+  <text x="470" y="36" font-size="16" font-weight="700" fill="#1d2330">L</text>
+  <text x="260" y="368" text-anchor="middle" font-size="12" fill="#5b6577">Coronal T1 with contrast, schematic (not to scale)</text>
+</svg>

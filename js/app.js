@@ -491,12 +491,13 @@
     );
 
     const showClosing = CONFIG.closingNote &&
-      (!CONFIG.closingNoteName || (state.name || "").toLowerCase() ===CONFIG.closingNoteName.toLowerCase());
+      (!CONFIG.closingNoteName || (state.name || "").toLowerCase() === CONFIG.closingNoteName.toLowerCase());
     const closing = showClosing
       ? el("p", { class: "closing-note" }, el("span", { "aria-hidden": "true" }, "💛"), CONFIG.closingNote)
       : null;
 
     const restart = el("div", { class: "restart" },
+      el("a", { class: "btn", href: "index.html" }, "← All practice exams"),
       el("button", { class: "link-btn", type: "button", onclick: () => $("#restart-dialog").showModal() }, "Start over on this device")
     );
 
@@ -642,6 +643,7 @@
 
     const payload = {
       examId: EXAM.id,
+      examTitle: EXAM.title,
       name: state.name,
       startedAt: new Date(state.startedAt).toISOString(),
       submittedAt: new Date(state.submittedAt).toISOString(),

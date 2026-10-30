@@ -4,6 +4,7 @@
 
 const HEADERS = [
   "Submitted",
+  "Exam",
   "Name",
   "Score",
   "Percent",
@@ -20,6 +21,7 @@ function doPost(e) {
   const sheet = getResultsSheet_();
   sheet.appendRow([
     new Date(data.submittedAt),
+    data.examTitle || data.examId || "",
     data.name || "(no name)",
     data.score + " / " + data.total,
     data.percent + "%",
@@ -47,6 +49,10 @@ function getResultsSheet_() {
     sheet.appendRow(HEADERS);
     sheet.setFrozenRows(1);
     sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight("bold");
+  } else if (sheet.getRange(1, 2).getValue() !== "Exam") {
+    // Sheets made before the Exam column existed get it inserted, so older rows stay lined up.
+    sheet.insertColumnAfter(1);
+    sheet.getRange(1, 2).setValue("Exam").setFontWeight("bold");
   }
   return sheet;
 }
